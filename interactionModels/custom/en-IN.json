@@ -1,0 +1,127 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "slots": [],
+          "name": "HelloWorldIntent",
+          "samples": [
+            "hello",
+            "how are you",
+            "say hi world",
+            "say hi",
+            "hi",
+            "say hello world",
+            "say hello"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "multipleValues": {
+                "enabled": false
+              },
+              "name": "Action",
+              "type": "ActionType"
+            },
+            {
+              "multipleValues": {
+                "enabled": false
+              },
+              "name": "Device",
+              "type": "Device_list"
+            }
+          ],
+          "name": "ControlDevicesIntent",
+          "samples": [
+            "to switch {Action} {Device} the devices",
+            "to switch {Action} {Device} devices",
+            "to switch {Action} the {Device} ",
+            "to turn {Action} the {Device}",
+            "to {Action} the {Device}",
+            "turn {Action} the {Device}",
+            "{Device} {Action}"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "GetDataIntent",
+          "samples": []
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "on"
+              }
+            },
+            {
+              "name": {
+                "value": "off"
+              }
+            }
+          ],
+          "name": "ActionType"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "synonyms": [
+                  "aaalll",
+                  "aaal",
+                  "all",
+                  "alll"
+                ],
+                "value": "All"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "ligs",
+                  "liht",
+                  "lightts"
+                ],
+                "value": "Light"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "fands",
+                  "fand"
+                ],
+                "value": "Fan"
+              }
+            }
+          ],
+          "name": "Device_list"
+        }
+      ],
+      "invocationName": "YOUR-ALEXA-INVOCATION-NAME"
+    }
+  }
+}

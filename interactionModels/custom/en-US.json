@@ -1,0 +1,99 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "slots": [],
+          "name": "HelloWorldIntent",
+          "samples": [
+            "hello",
+            "how are you",
+            "say hi world",
+            "say hi",
+            "hi",
+            "say hello world",
+            "say hello"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "multipleValues": {
+                "enabled": true
+              },
+              "name": "Action",
+              "type": "ActionType"
+            },
+            {
+              "multipleValues": {
+                "enabled": true
+              },
+              "name": "Device",
+              "type": "Device_list"
+            }
+          ],
+          "name": "ControlDevicesIntent",
+          "samples": [
+            "to turn {Action} the {Device}",
+            "to {Action} the {Device}",
+            "turn {Action} the {Device}",
+            "{Device} {Action}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "on"
+              }
+            },
+            {
+              "name": {
+                "value": "off"
+              }
+            }
+          ],
+          "name": "ActionType"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Light"
+              }
+            },
+            {
+              "name": {
+                "value": "Fan"
+              }
+            }
+          ],
+          "name": "Device_list"
+        }
+      ],
+      "invocationName": "YOUR-ALEXA-INVOCATION-NAME"
+    }
+  }
+}
